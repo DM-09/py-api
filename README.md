@@ -9,6 +9,9 @@ Easiest way to minimize CORS error
 <a href='https://dm-09.github.io/py-api/start/'>여기</a>에서 URL을 입력하고 복사된 URL을 사용하면 됩니다. <br>
 Just enter the URL from <a href='https://dm-09.github.io/py-api/start/'>here</a> and use the copied URL.
 
+테스트는 <a href='https://dm-09.github.io/py-api/'>여기서</a><br>
+Test <a href='https://dm-09.github.io/py-api/'>here</a>
+
 <br>
 
 ## 주의 Caution
