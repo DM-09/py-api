@@ -14,11 +14,12 @@ Just enter the URL from <a href='https://dm-09.github.io/py-api/start/'>here</a>
 ## 주의 Caution
 - 시간이 조금 걸릴 수 있습니다.<br>
 - 에러가 나면 'Error'를 반환합니다.
+- Method는 Get만 지원합니다
 <br>
 
 - It may take some time.
 - When an error occurs an 'Error' is returned
-
+- Method only supports Get
 <br>
 
 ## 문서 Docs
