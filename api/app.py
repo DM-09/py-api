@@ -8,6 +8,7 @@ CORS(app)
 @app.route("/<string:URL>", methods=['GET'])
 def GetInfo(URL):
     URL = URL.replace('~', '/').replace('$', '?')
+    URL = URL.replace('|', '/')
 
     try:
         data = req.get(URL).json()
