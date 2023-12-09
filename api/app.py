@@ -6,7 +6,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/", methods=['GET'])
+@app.route("/<string:URL>", methods=['GET'])
 def OldVersion(URL):
     print(URL)
     URL = URL.replace('~', '/').replace('$', '?')
