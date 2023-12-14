@@ -8,7 +8,7 @@ CORS(app)
 
 @app.route("/<string:URL>", methods=['GET'])
 @app.route('/', defaults={'URL': 'a'})
-def V0(URL):
+def Get(URL):
     a = flask.request.args.get('r')
 
     if a: URL = a
