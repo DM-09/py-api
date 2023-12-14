@@ -6,19 +6,11 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/<string:URL>", methods=['GET'])
-def OldVersion(URL):
-    print(URL)
-    URL = URL.replace('~', '/').replace('$', '?')
-
-    try: data = req.get(URL).json()
-    except: return Response('Error', 404)
-    return jsonify(data), 200
-
-@app.route("/q", methods=['GET'])
-def NewVersion():
-    URL = flask.request.url
-    URL = URL[URL.index('q?')+2:]
+@app.route("/<path:URL>", methods=['GET'])
+def GetInfo(URL):
+    ru = flask.request.url
+    if URL[0] == '@': URL = ru[ru.index('@')+1:]
+    else: URL = URL.replace('~', '/').replace('$', '?')
 
     try: data = req.get(URL).json()
     except: return Response('Error', 404)
