@@ -18,7 +18,7 @@ def V0(URL):
 
 @app.route('/@<path:URL>', methods=['GET'])
 def V1(URL):
-    URL = flask.request.url[len(server):]
+    URL = flask.request.url[len(server):].replace('https:/', 'https://')
 
     try: data = req.get(URL).json()
     except: return Response('Error', 404)
