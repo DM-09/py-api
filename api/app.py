@@ -6,10 +6,12 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+server = 'https://api-py.vercel.app/@'
+
 @app.route("/<path:URL>", methods=['GET'])
 def GetInfo(URL):
     ru = flask.request.url
-    if URL[0] == '@': URL = ru[ru.index('@')+1:]
+    if URL[0] == '@': URL = ru[len(server):]
     else: URL = URL.replace('~', '/').replace('$', '?')
 
     try: data = req.get(URL).json()
